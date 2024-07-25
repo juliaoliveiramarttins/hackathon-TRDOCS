@@ -1,0 +1,92 @@
+header {
+    background-image: url("images/Gringotts-Wizarding-Bank-8-e1556614791641.jpg");
+    /*Linear-gradient altera a luminosidade da imagem*/
+    background-image: linear-gradient(rgba(54, 51, 51, 0.5), rgba(0, 0, 0, 0.5)), url("images/Gringotts-Wizarding-Bank-8-e1556614791641.jpg");
+    /* background no repeat para não repetir a imagem*/
+    background-repeat:no-repeat;
+    padding: 4rem ;
+    height: 40%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align : center;
+}
+
+body { 
+    background-color: rgb(3, 31, 10);
+    color: rgb(0, 0, 0);
+}
+
+/*======= LOGIN CSS=====*/
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#email{
+    background-color: rgb(236, 223, 223);
+    font-family: "reggae one";
+    color:black;
+    padding: 1rem;
+    margin-top: 50px;
+    border-radius: 0.25rem;
+    
+}
+
+#password{
+    background-color: rgb(236, 223, 223);
+    font-family: "reggae one";
+    color:black;
+    padding: 1rem;
+    margin-top: 15px;
+    border-radius: 0.25rem;
+
+}
+
+#login{
+    background-color: rgb(119, 163, 78);
+    font-family: "reggae one";
+    color:black;
+    padding: 1rem;
+    margin-top: 15px;
+    border-radius: 0.25rem;
+
+}
+
+.container{
+    font-size: 0.7cm;
+    padding: 1rem;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-family: "reggae one";
+    border-radius: 0.25rem;
+}
+
+#logo { 
+    color: white;
+    font-family: "ceviche one";
+    font-size: 3.5rem;
+}
+
+.entrar{
+    background-color:white;
+    font-family: "reggae one";
+    color:black;
+    padding: 1rem;
+    margin-top: 15px;
+    border-radius: 0.25rem;
+    
+}
+
+.text-footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7cm;
+    font-family: "ceviche one";
+    color: rgb(233, 230, 230);
+    opacity: 0.7;
+    padding: 5rem 0 5rem;}

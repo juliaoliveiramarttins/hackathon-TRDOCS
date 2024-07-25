@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringotts</title>
+    <!-- links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Fanwood+Text&family=Reggae+One&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+        <h1 id="logo"> Gringotts</h1>
+    </header>
+
+    <main class="container">
+        <section id="balance">
+            <h2 class="sr-only"> Balanço</h2>
+
+            <div class="card">
+                <h3>
+                    <span> Entradas</span>
+                    <img src="/images/income.svg" alt="">
+                </h3>
+                <p id="incomeDisplay"> R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <span> Saídas</span>
+                    <img src="/images/expense.svg" alt="">
+                </h3>
+
+                <p id="expenseDisplay"> $R$ 0,00</p>
+            </div>
+
+            <div class="card total">
+                <h3 id="total">
+                    <span> Total</span>
+                    <img src="/images/total.svg" alt="">
+                </h3>
+                <p id="totalDisplay"> R$ 0,00</p>
+            </div>
+        </section>
+
+        <section id="transaction">
+            <h2 class="sr-only">Transações</h2>
+            <a href="#"
+            onclick="Modal.open()" class="button new">+ Nova Transação</a>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="showNewTransaction"><tbody>
+            </table>
+        </section>
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2> Nova Transação</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class=" input-group">
+                        <label class="sr-only" for=" description">Descrição</label>
+                        <input type=" text" id="description" name="description" placeholder="Descrição" />
+                    </div>
+
+                    <div class=" input-group">
+                        <label class="sr-only" for="amount"> Valor</label>
+                        <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00" />
+                        <small>
+                            Use o sinal - (Negativo) para despesas e , (Vírgula) para casas decimais
+                        </small>
+                    </div>
+
+                    <div class=" input-group">
+                        <label class="sr-only" for=" date"> Data</label>
+                        <input type="date" id="date" name="date" />
+                    </div>
+
+                    <div class="input-group actions">
+                        <a 
+                        onclick="Modal.close()"
+                        href="#" 
+                        class="button cancel">Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  <div class="container">
+    <button type="button" class="collapsible">Quem Somos</button>
+    <div class="content">
+        <p class="aboutUsText">Gringotts é o único banco do mundo mágico. Fundado em 1474 pelo duende Gringote, tem como lema a seguinte frase: "Fortius Quo Fidelius", que em latim significa "Força pela Lealdade". Nosso banco é administrado pelos mais inteligentes e leais duendes do mundo e conta com altos serviços de restrição e segurança em  nossos cofres.  Em contraste com o magnífico mármore da entrada e do saguão principal, as passagens para os cofres são de pedras, iluminadas por archotes flamejantes.</p>
+        <p class="aboutUsText">Nas passagens, passam vagonetes controlados pelos duendes. Esses vagonetes levam os visitantes para baixo da superfície da terra, através de “um labirinto de passagens cheias de curvas” para os cofres. Os vagonetes vão em alta velocidade, o que impede os ocupantes de darem uma boa olhada ao seu redor.</p>
+        <p class="aboutUsText">Os cofres variam em tamanho e segurança. Os maiores e mais bem-protegidos cofres pertencem às famílias  mais antigas e estão a uma profundidade maior. Os cofres que estão mais perto da superfície são menores e  possuem menos precauções de segurança os cercando – são abertos com chaves, por exemplo, ao contrário dos cofres maiores, que requerem o toque de um duende para ter acesso.</p>
+        <p class="aboutUsText">Caso alguém passe pelo hall de entrada disfarçado, ao entrar no caminho para os cofres, uma alta tecnologia é capaz de identificar o impostor imediatamente. Assim quando ladrões invadem o banco, a Queda do Ladrão é ativada.</p>
+        <p class="aboutUsText">Além disso, nosso banco conta com um código que  proíbe nossos funcionários de falarem sobre os segredos do banco e considerariam “vil traição” quebrar qualquer parte do tal código. </p>
+        <p class="aboutUsText">Nós, os Gringotts, prezamos muito pela lealdade e, é por isso que nunca te deixaríamos para trás! Sendo assim, acreditamos ser a melhor opção para você que procura segurança, e um banco um tanto diferente para te ajudar a cuidar de suas finanças! Venha conhecer nossos outros serviços pessoalmente! O banco principal fica localizado no lado norte do Beco Diagonal em Londres, Inglaterra.</p>
+    </div>
+  </div>
+
+    <h6 class="warning">
+    AVISO: Esta aplicação é totalmente gratuita, sendo apenas um contribuinte para te ajudar em suas movimentações financeiras. Sendo assim, não possui vínculo com outros serviços que nosso banco oferece.
+    </h6>
+
+    <form action="action_page.php" method="post"> </form>
+   
+    <footer class="text-footer">
+        <p>Gringotts</p>
+        <div>
+            <img src="images/witch.svg" style="width:3.5%;"/>
+            Desenvolvido por Júlia Martins
+        </div>
+    </footer>
+
+    <script src="./scripts.js"> </script>
+</body>
+
+</html>
